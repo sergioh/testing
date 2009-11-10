@@ -1,0 +1,410 @@
+/* $Id: style.css,v 1.1.2.9 2009/05/22 08:46:11 jmburnz Exp $ */
+
+/**
+ * @file style.css
+ *
+ * Use this file to override the Genesis core modular styles 
+ * (such as the HTML elements in typography.css), module CSS 
+ * and other Drupal styles. Anything that doesn't fit logically
+ * into page.css, nodes.css, blocks.css or comments.css can go here.
+ */
+
+/**********************************************************
+ *                    Body
+ **********************************************************/
+
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 1;
+	font-weight: normal;
+	font-style: inherit;
+	line-height: 1;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: baseline;
+	line-height:180%;
+}
+body { background-color:#465e74;}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+p {}
+
+strong {}
+em, dfn {}
+dfn {}
+
+sup, sub {}
+
+del {}
+ins {}
+
+blockquote {}
+cite {}
+q {}
+
+address {}
+
+ul {}
+ol {}
+li {}
+
+dl {}
+dd {}
+dt {}
+
+
+abbr {}
+acronym {}
+
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
+
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+a {
+  margin: 0; 
+  padding: 0;
+}
+
+a:link    {}
+a:visited {}
+a:hover   {}
+a:active  {}
+a.active  {}
+
+/* Set global a:active and a:focus styles. */
+a:active,
+a:focus {
+  color: #C00000;
+  border: 0;
+}
+
+/* Drupal sets this to black. */
+li a.active {}
+
+/* Remove borders on linked images. */
+a img {
+  border: none;
+}
+
+
+/**********************************************************
+ *                 Accessibility Classes
+ **********************************************************/
+
+/* Hide content without positioning issues. */
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+
+/* Move content off screen where appropriate. */
+.offscreen {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Completely remove content for all users.
+   DO NOT use this for Skip links, display:none 
+   hides content from screen readers! */
+.remove {
+  display: none;
+}
+
+.clear{ clear:both;}
+.aling-left{float:left; border:1px solid;
+float:left;
+margin:9px;}
+/**********************************************************
+ *                 Custom Styles
+ **********************************************************/
+/**
+ * Here you can add custom stles for your theme that do not fit
+ * into one if the modular stylesheets (such as the nodes, blocks,
+ * page and comments stylesheets).
+ */
+	
+/*******
+*   main container
+***/
+body{
+	width:100%;
+}
+div#container{
+    /* Width for IE6 */ background-color:#cccccc;
+	margin:0 auto;
+    padding-left:8px;
+	height:auto;
+	width: 988px;
+    background:url(/static/images/container.left.shadow.gif) repeat-y top left;
+}
+div#main-container{
+	height:auto;
+	width: 980px;
+	padding-right:8px;
+	background:url(/static/images/container.right.shadow.gif) repeat-y top right;
+}
+#header{
+	height:83px;
+	width:980px;
+	background:#000;
+	clear:both;
+}
+#branding{
+	padding-left:36px;
+	padding-top:18px;
+	float:left;
+}
+#branding a{
+	display:block;
+	height:47px;
+	width:200px;
+	background:url(/static/images/logo.jpg) no-repeat top left;
+}
+
+/*******
+*  global
+****/
+#main-content{
+	height:auto;
+	width:980px;
+}
+/****
+*   menu
+*/
+#main-menu{
+	float:left;
+	margin-top:33px;
+	width:600px;
+	height:50px;
+}
+#main-menu-1 li{
+	list-style:none;
+}
+#main-menu-1 li.main-menu-parent{
+	float:left;
+	display:block;
+	width:153px;
+}
+#main-menu-submenu-item{
+	z-index:100;
+}
+a.shopnow-button{
+	display:block;
+	float:left;
+	width:95px;
+	height:24px;
+	margin-top:42px;
+	background:url(/static/images/index.shopnow.button.jpg) no-repeat top left;
+}
+/****
+* footer
+*/
+div#footer{
+	padding:30px 0 0 35px;
+	border-top: 4px solid #ffffff;
+    min-height:110px;
+    height:auto !important;
+	height:110px;
+	background-color:#d5d5d5;
+}
+div#footer ul li{ 
+list-style:none;
+}
+div#footer ul li a{
+	font-size:10px;
+    color:#0f0f0f;
+}
+div#footer ul.footer-category{
+	display:block;
+	float:left;
+	width:120px;
+	padding:0 15px;
+}
+div#footer ul li.category-title{
+	 font-weight:bold;
+}
+/***********
+*    main content index
+*************/
+#index-main-content-top{
+	clear:both;
+	height:447px;
+	background:url(/static/images/index.banner.bg.gif) no-repeat top left;
+}
+#index-main-content-top img{ float:left;}
+#index-main-content-top div#index-content{ width:330px;  padding-top:42px; float:left;}
+div#index-content p{ margin-left:45px; font-size:12px; margin-bottom:40px; margin-top:5px;}
+a.learnmore{
+margin-left:45px;
+display:block;
+height:50px;
+width:134px;
+float:left;
+}
+a.takeyourtour {
+display:block;
+float:left;
+height:49px;
+width:132px;
+}
+#index-main-content-bottom{
+	clear:both;
+	height:365px;
+	width:980px;
+	background:url(/static/images/index.below_fold.bg.tile.png) repeat-x top left;
+}
+div#solutions {
+	margin:20px 0;
+	height:308px;
+	width:485px;
+	float:left;
+	background:url(/static/images/index.highlight.left.top.png) no-repeat top right;
+}
+div#solutions h3{
+	color:#ffffff;
+	padding:5px 0px 0px 40px;
+}
+div#solutions div.solutions_content{
+	background:url(/static/images/index.highlight.left.middle.png) repeat-y top right;
+	margin-top:22px;
+	height:200px;
+}
+div#solutions div.solutions_content_image1{
+	width:172px;
+	height:123px;
+	margin:0px 10px 10px 0px;
+	float:left;
+}
+div#solutions div.solutions_content_image2{
+	width:93px;
+	height:53px;
+	margin:22px 0px 0px 0px;
+	float:left;
+}
+div#solutions div.solutions_content_title p{
+	color:#000000;
+	margin:22px 40px 0px 15px;
+	line-height:20px;
+	font-size:13px;
+	}
+div#solutions div.solutions_content_text{
+	margin:18px 40px 0px 0px;
+	padding:0px 0px 10px 20px;}
+div#solutions div.solutions_content_text p{
+	line-height:16px;
+	text-align:justify;
+	font-size:11px;
+}
+div#solutions div#solutions_footer a{
+	display:block;
+	float:right;
+	margin-right:40px;
+	width:195px;
+	height:23px;
+	background:url(/static/images/index.button.more_solutions.png) no-repeat top left;}
+div#solutions div#solutions_footer{
+	height:57px;
+	background:url(/static/images/index.highlight.left.bottom.png) no-repeat top right;
+}
+/*
+*    news
+*/
+div#news {
+	margin:20px 0 20px 10px;
+	height:308px;
+	width:485px;
+	float:left;
+	background:url(/static/images/index.highlight.right.top.png) no-repeat top left;
+}
+div#news h3{
+	color:#ffffff;
+	padding:5px 0px 0px 40px;
+}
+div#news div.news-content{
+	background:url(/static/images/index.highlight.right.middle.png) repeat-y top left;
+	margin-top:22px;
+	height:200px;
+	padding-left:30px;
+}
+div.news-item{
+	clear:both;
+	padding-top:10px;
+}	
+span.news-item-image{
+	display:block;
+	width:43px;
+	height:43px;
+	border:1px #ffffff solid medium;
+	margin:10px 10px 0px 0px;
+	float:left;
+}
+span.news-item-content{
+	display:block;
+	float:left;
+}
+span.news-item-content h4{
+	font-weight:bold;
+	font-size:12px;
+}
+span.news-item-content p{
+	line-height:16px;
+	font-size:11px;
+}
+div#news div.news-footer{
+	height:57px;
+	background:url(/static/images/index.highlight.right.bottom.png) no-repeat top left;
+}
+div#news-social{
+	clear:both;
+	padding:20px;
+	height:80px;
+	width:400px;
+	border-top: #ffffff dashed 2px medium;
+	font-size:13px;
+}
+div#news-social a{
+	display:block;
+	width:50px;
+	height:52px;
+	float:left;
+	margin-right:30px;
+}
+a.followus-facebook{
+	background:url(/static/images/follow_us.fb.png) no-repeat top left;
+	margin-left:110px;
+}
+a.followus-twitter	
+{	
+	background:url(/static/images/follow_us.twitter.png) no-repeat top left;
+}
+a.followus-rss	
+{
+	background:url(/static/images/follow_us.rss.png) no-repeat top left;
+}

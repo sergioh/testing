@@ -1,0 +1,12 @@
+#!/bin/sh
+
+LOCAL=$(dirname $(readlink -f $0))
+MANAGE=${LOCAL}/manage.py
+
+echo "Running syncdb"
+$MANAGE syncdb
+if [ $? -eq 0 ]; then
+    # if no problem at syncdb run migrate
+    echo "Running migrate"
+    $MANAGE migrate
+fi

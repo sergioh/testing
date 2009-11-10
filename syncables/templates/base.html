@@ -1,0 +1,76 @@
+{% load common %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>{% block head_title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="{% block meta_description %}{% endblock %}" />
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+    <link rel="stylesheet" type="text/css" media="all" href="{% static_url "styles/style.css" %}" />
+    <link rel="stylesheet" type="text/css" media="all" href="{% static_url "styles/global.css" %}" />
+    <script type="text/javascript" src="{% static_url "scripts/jquery.min.js" %}"></script>
+    <script type="text/javascript" src="{% static_url "scripts/common.js" %}"></script>
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+<div id="container">
+ <div id="main-container">
+	<div id="header">
+    	<div id="branding"><a href="." id="logo"><h1 class="offscreen">Syncables</h1></a></div> 
+        <div id="main-menu">
+              <ul class="main-menu" id="main-menu-1">
+              	<li class="main-menu-parent"  id="menu-item-1"><a href="">Products</a>
+                	<ul>
+                    <span class="main-menu-submenu-container">
+                    	<span class="main-menu-submenu-image"></span>
+                    	<li class="main-menu-submenu-item"  id="submenu-item-3"><a href="">Syncables Solutions</a></li>
+                        <li class="main-menu-submenu-item" id="submenu-item-2"><a href="">Syncables 360</a></li>
+                        <li class="main-menu-submenu-item" id="submenu-item-3"><a href="">Syncables Desktop</a></li>
+                     </span>
+                    </ul>
+                </li>
+                <li class="main-menu-parent" id="menu-item-1"><a href="">Solutions</a></li>
+                <li class="main-menu-parent" id="menu-item-1"><a href="">Support</a></li>
+              </ul>
+        </div>
+        <a href="" class="shopnow-button"></a>
+  </div><!-- /header -->
+  <div id="main-content">
+    {% block container %}
+    {% endblock %}
+  </div><!-- /main content -->
+  <div id="footer">
+		<ul class="footer-category">
+			<li class="category-title">Tour</li>
+			<li><a href="">Syncables Tour</a></li>
+			<li><a href="">HP Sponsored</a></li>
+		</ul>
+		<ul class="footer-category">
+			<li class="category-title">Features</li>
+			<li><a href="">Sync your PC, Mac, & Linux Computers</a></li>
+		</ul>
+		<ul class="footer-category">
+			<li class="category-title">Help Center</li>
+			<li><a href="">Getting Started</a></li>
+			<li><a href="">Knowledge Base</a></li>
+		</ul>
+		<ul class="footer-category">
+			<li class="category-title">About Us</li>
+			<li><a href="">About Us</a></li>
+			<li><a href="/the-team">The Team</a></li>
+		</ul>
+		<ul class="footer-category">
+			<li class="category-title">News</li>
+			<li><a href="/news">Press</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+		<ul class="footer-category">
+			<li class="category-title">Store</li>
+			<li><a href="">Buy Now</a></li>
+			<li><a href="">Volume Sales</a></li>
+		</ul>
+	</div> <!-- /footer -->
+  </div><!-- /main container -->
+</div><!-- /container -->
+</body>
+</html>
